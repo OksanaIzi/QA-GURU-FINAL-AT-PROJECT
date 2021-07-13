@@ -1,7 +1,10 @@
 package tests.UI;
 
+import annotations.Layer;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
@@ -10,10 +13,13 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
+@Layer("web")
+@Owner("Izibekova")
 @Feature("Главная страница - разделы меню")
 public class BaseMenuTests extends TestBase {
 
     @Test
+    @Story("Снять квартиру")
     @DisplayName("Снять 2-комн квартиру")
     public void rentFlatTest(){
         step("Открывам главную страницу", () -> {
@@ -42,6 +48,7 @@ public class BaseMenuTests extends TestBase {
     }
 
     @Test
+    @Story("Проверить оценку недвижимости")
     @DisplayName("Сервисы - оценка недвижимости")
     public void checkServiceTest(){
         step("Открывам главную страницу", () -> {

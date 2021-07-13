@@ -1,7 +1,10 @@
 package tests.UI;
 
+import annotations.Layer;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
@@ -12,10 +15,13 @@ import static com.codeborne.selenide.Selenide.open;
 import static helpers.DataHelper.dataConfig;
 import static io.qameta.allure.Allure.step;
 
+@Layer("web")
+@Owner("Izibekova")
 @Feature("Проверка авторизации")
 public class AthorizationTests extends TestBase {
 
     @Test
+    @Disabled
     @DisplayName("Авторизация с валидными данными")
     public void athorizationWithValidCredentials(){
         step("Открывам главную страницу", () -> {
@@ -45,6 +51,7 @@ public class AthorizationTests extends TestBase {
     }
 
     @Test
+    @Disabled
     @DisplayName("Авторизация с невалидными данными")
     public void athorizationWithInvalidCredentials(){
         step("Открывам главную страницу", () -> {
