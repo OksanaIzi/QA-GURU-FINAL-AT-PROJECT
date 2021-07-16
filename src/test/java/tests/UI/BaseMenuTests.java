@@ -6,6 +6,8 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
 
@@ -20,6 +22,7 @@ public class BaseMenuTests extends TestBase {
 
     @Test
     @Story("Снять квартиру")
+    @Tags({@Tag("web"), @Tag("regress")})
     @DisplayName("Снять 2-комн квартиру")
     public void rentFlatTest(){
         step("Открывам главную страницу", () -> {
@@ -49,6 +52,7 @@ public class BaseMenuTests extends TestBase {
 
     @Test
     @Story("Проверить оценку недвижимости")
+    @Tags({@Tag("web"), @Tag("regress")})
     @DisplayName("Сервисы - оценка недвижимости")
     public void checkServiceTest(){
         step("Открывам главную страницу", () -> {
