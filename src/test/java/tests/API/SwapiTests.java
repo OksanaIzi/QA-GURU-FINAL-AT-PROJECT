@@ -73,7 +73,7 @@ public class SwapiTests {
                 .then()
                 .log().body()
                 .extract().as(PersonExtended.class);
-        assertEquals("82", data.getCount());
+        assertEquals(82, data.getCount());
     }
 
     @Test
