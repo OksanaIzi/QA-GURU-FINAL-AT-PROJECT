@@ -43,11 +43,7 @@ public class SwapiTests {
     @Tag("api")
     @DisplayName("Проверка получения информации о росте героя")
     public void successGetListUserCheckName(){
-        PersonExtended data = given()
-                .baseUri("https://swapi.dev")
-                .basePath("/api")
-                .log().all()
-                .contentType(ContentType.JSON)
+        PersonExtended data = Specs.request
                 .when()
                 .get("/people")
                 .then()
@@ -63,11 +59,7 @@ public class SwapiTests {
     @Tag("api")
     @DisplayName("Проверка получения информации об общем кол-ве персонажей на сервисе")
     public void successGetListUserCheckCount(){
-        PersonExtended data = given()
-                .baseUri("https://swapi.dev")
-                .basePath("/api")
-                .log().all()
-                .contentType(ContentType.JSON)
+        PersonExtended data = Specs.request
                 .when()
                 .get("/people")
                 .then()
@@ -82,11 +74,7 @@ public class SwapiTests {
     @Tag("api")
     @DisplayName("Проверка корректной ссылки")
     public void successGetListUserCheckURL(){
-        PersonExtended data = given()
-                .baseUri("https://swapi.dev")
-                .basePath("/api")
-                .log().all()
-                .contentType(ContentType.JSON)
+        PersonExtended data = Specs.request
                 .when()
                 .get("/people")
                 .then()
@@ -102,11 +90,7 @@ public class SwapiTests {
     @Tag("api")
     @DisplayName("Проверка получения информации массе героя")
     public void successGetListUserMass(){
-        PersonExtended data = given()
-                .baseUri("https://swapi.dev")
-                .basePath("/api")
-                .log().all()
-                .contentType(ContentType.JSON)
+        PersonExtended data = Specs.request
                 .when()
                 .get("/people")
                 .then()
