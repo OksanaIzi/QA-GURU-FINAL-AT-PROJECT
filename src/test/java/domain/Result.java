@@ -1,39 +1,18 @@
-package models;
+package domain;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import javax.annotation.Generated;
 import java.util.List;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "name",
-        "height",
-        "mass",
-        "hair_color",
-        "skin_color",
-        "eye_color",
-        "birth_year",
-        "gender",
-        "homeworld",
-        "films",
-        "species",
-        "vehicles",
-        "starships",
-        "created",
-        "edited",
-        "url"
-})
-@Generated("jsonschema2pojo")
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Result {
 
-    @JsonProperty("name")
     private String name;
-    @JsonProperty("height")
+
     private String height;
-    @JsonProperty("mass")
+
     private String mass;
     @JsonProperty("hair_color")
     private String hairColor;
@@ -43,51 +22,47 @@ public class Result {
     private String eyeColor;
     @JsonProperty("birth_year")
     private String birthYear;
-    @JsonProperty("gender")
+
     private String gender;
-    @JsonProperty("homeworld")
+
     private String homeworld;
-    @JsonProperty("films")
+
     private List<String> films = null;
-    @JsonProperty("species")
+
     private List<String> species = null;
-    @JsonProperty("vehicles")
+
     private List<String> vehicles = null;
-    @JsonProperty("starships")
+
     private List<String> starships = null;
-    @JsonProperty("created")
+
     private String created;
-    @JsonProperty("edited")
+
     private String edited;
-    @JsonProperty("url")
+
     private String url;
 
-    @JsonProperty("name")
+
     public String getName() {
         return name;
     }
 
-    @JsonProperty("name")
     public void setName(String name) {
         this.name = name;
     }
 
-    @JsonProperty("height")
     public String getHeight() {
         return height;
     }
 
-    @JsonProperty("height")
+
     public void setHeight(String height) {
         this.height = height;
     }
 
-    @JsonProperty("mass")
     public String getMass() {
         return mass;
     }
 
-    @JsonProperty("mass")
     public void setMass(String mass) {
         this.mass = mass;
     }
@@ -132,92 +107,74 @@ public class Result {
         this.birthYear = birthYear;
     }
 
-    @JsonProperty("gender")
     public String getGender() {
         return gender;
     }
 
-    @JsonProperty("gender")
     public void setGender(String gender) {
         this.gender = gender;
     }
 
-    @JsonProperty("homeworld")
     public String getHomeworld() {
         return homeworld;
     }
 
-    @JsonProperty("homeworld")
     public void setHomeworld(String homeworld) {
         this.homeworld = homeworld;
     }
 
-    @JsonProperty("films")
     public List<String> getFilms() {
         return films;
     }
 
-    @JsonProperty("films")
     public void setFilms(List<String> films) {
         this.films = films;
     }
 
-    @JsonProperty("species")
     public List<String> getSpecies() {
         return species;
     }
 
-    @JsonProperty("species")
     public void setSpecies(List<String> species) {
         this.species = species;
     }
 
-    @JsonProperty("vehicles")
     public List<String> getVehicles() {
         return vehicles;
     }
 
-    @JsonProperty("vehicles")
     public void setVehicles(List<String> vehicles) {
         this.vehicles = vehicles;
     }
 
-    @JsonProperty("starships")
     public List<String> getStarships() {
         return starships;
     }
 
-    @JsonProperty("starships")
     public void setStarships(List<String> starships) {
         this.starships = starships;
     }
 
-    @JsonProperty("created")
     public String getCreated() {
         return created;
     }
 
-    @JsonProperty("created")
     public void setCreated(String created) {
         this.created = created;
     }
 
-    @JsonProperty("edited")
     public String getEdited() {
         return edited;
     }
 
-    @JsonProperty("edited")
     public void setEdited(String edited) {
         this.edited = edited;
     }
 
-    @JsonProperty("url")
     public String getUrl() {
         return url;
     }
 
-    @JsonProperty("url")
     public void setUrl(String url) {
         this.url = url;
     }
