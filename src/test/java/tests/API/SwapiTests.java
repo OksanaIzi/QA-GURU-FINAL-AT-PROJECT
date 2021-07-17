@@ -5,7 +5,6 @@ import annotations.*;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import models.PersonExtended;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -27,7 +26,7 @@ public class SwapiTests {
     @JiraIssues({@JiraIssue("QC5-9")})
     @ManualMember("Izibekova")
     @DisplayName("Проверка получения информации о первом герое")
-    public void successGetUsersList(){
+    public void successGetUsersList() {
         Specs.request
                 .when()
                 .get("/people/")
@@ -45,7 +44,7 @@ public class SwapiTests {
     @ManualMember("Izibekova")
     @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка получения информации о росте героя")
-    public void successGetListUserCheckName(){
+    public void successGetListUserCheckName() {
         PersonExtended data = Specs.request
                 .when()
                 .get("/people")
@@ -64,7 +63,7 @@ public class SwapiTests {
     @ManualMember("Izibekova")
     @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка получения информации об общем кол-ве персонажей на сервисе")
-    public void successGetListUserCheckCount(){
+    public void successGetListUserCheckCount() {
         PersonExtended data = Specs.request
                 .when()
                 .get("/people")
@@ -82,7 +81,7 @@ public class SwapiTests {
     @ManualMember("Izibekova")
     @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка корректной ссылки")
-    public void successGetListUserCheckURL(){
+    public void successGetListUserCheckURL() {
         PersonExtended data = Specs.request
                 .when()
                 .get("/people")
@@ -101,7 +100,7 @@ public class SwapiTests {
     @ManualMember("Izibekova")
     @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка получения информации массе героя")
-    public void successGetListUserMass(){
+    public void successGetListUserMass() {
         PersonExtended data = Specs.request
                 .when()
                 .get("/people")

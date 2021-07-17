@@ -1,16 +1,14 @@
 package tests.UI.tests;
 
 import annotations.*;
-import com.codeborne.selenide.Condition;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
+import org.junit.jupiter.api.Test;
 import tests.TestBase;
 import tests.UI.steps.MainPageSteps;
-
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-import static io.qameta.allure.Allure.step;
 
 @Layer("web")
 @Owner("Izibekova")
@@ -27,7 +25,7 @@ public class MainPageTests extends TestBase {
     @ManualMember("Izibekova")
     @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка заголовка страницы")
-    public void checkSuccessfulOpenPage(){
+    public void checkSuccessfulOpenPage() {
         steps.openPage(BASE_URL)
                 .checkTitle();
     }
@@ -39,7 +37,7 @@ public class MainPageTests extends TestBase {
     @ManualMember("Izibekova")
     @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка отображения разделов меню")
-    public void checkItemsIsDisplayed(){
+    public void checkItemsIsDisplayed() {
         steps.openPage(BASE_URL)
                 .checkItemsOnMainPage();
     }
@@ -51,9 +49,8 @@ public class MainPageTests extends TestBase {
     @ManualMember("Izibekova")
     @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка отображаения разделов основного меню")
-    public void checkItemsBaseMenuAreDisplayed(){
+    public void checkItemsBaseMenuAreDisplayed() {
         steps.openPage(BASE_URL)
                 .checkMenuItemBase();
     }
-
 }

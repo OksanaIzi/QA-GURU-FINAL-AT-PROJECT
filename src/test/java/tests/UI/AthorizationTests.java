@@ -26,7 +26,7 @@ public class AthorizationTests extends TestBase {
     @ManualMember("Izibekova")
     @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Авторизация с валидными данными")
-    public void athorizationWithValidCredentials(){
+    public void athorizationWithValidCredentials() {
         step("Открывам главную страницу", () -> {
             open("https://m2.ru/");
         });
@@ -59,7 +59,7 @@ public class AthorizationTests extends TestBase {
     @ManualMember("Izibekova")
     @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Авторизация с невалидными данными")
-    public void athorizationWithInvalidCredentials(){
+    public void athorizationWithInvalidCredentials() {
         step("Открывам главную страницу", () -> {
             open("https://m2.ru/");
         });

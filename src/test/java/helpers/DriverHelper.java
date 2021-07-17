@@ -12,7 +12,7 @@ public class DriverHelper {
 
     public static DriverConfig driverConfig = ConfigFactory.create(DriverConfig.class, System.getProperties());
 
-    public static void configureDriver(){
+    public static void configureDriver() {
 
         Configuration.browser = driverConfig.webBrowser();
         addListener("AllureSelenide", new AllureSelenide());

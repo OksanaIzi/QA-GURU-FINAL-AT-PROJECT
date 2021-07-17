@@ -10,12 +10,12 @@ import static helpers.DriverHelper.configureDriver;
 public class TestBase {
 
     @BeforeAll
-    static void setUp(){
+    static void setUp() {
         configureDriver();
     }
 
     @AfterEach
-    public void addAttachments(){
+    public void addAttachments() {
         attachScreenshot("Last screenshot");
         attachPageSource();
         attachAsText("Browser console logs", getConsoleLogs());
