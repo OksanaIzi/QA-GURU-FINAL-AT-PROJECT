@@ -1,6 +1,6 @@
 package tests.UI;
 
-import annotations.Layer;
+import annotations.*;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -22,6 +22,9 @@ public class BaseMenuTests extends TestBase {
 
     @Test
     @Story("Снять квартиру")
+    @AutoMember("Izibekova")
+    @ManualMember("Izibekova")
+    @JiraIssues({@JiraIssue("QC5-9")})
     @Tags({@Tag("web"), @Tag("regress")})
     @DisplayName("Снять 2-комн квартиру")
     public void rentFlatTest(){
@@ -53,6 +56,9 @@ public class BaseMenuTests extends TestBase {
     @Test
     @Story("Проверить оценку недвижимости")
     @Tags({@Tag("web"), @Tag("regress")})
+    @AutoMember("Izibekova")
+    @ManualMember("Izibekova")
+    @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Сервисы - оценка недвижимости")
     public void checkServiceTest(){
         step("Открывам главную страницу", () -> {

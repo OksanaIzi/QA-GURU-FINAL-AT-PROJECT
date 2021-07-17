@@ -1,6 +1,6 @@
 package tests.UI.tests;
 
-import annotations.Layer;
+import annotations.*;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -23,6 +23,9 @@ public class MainPageTests extends TestBase {
     @Test
     @Feature("Главная страница")
     @Tags({@Tag("regress"), @Tag("web")})
+    @AutoMember("Izibekova")
+    @ManualMember("Izibekova")
+    @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка заголовка страницы")
     public void checkSuccessfulOpenPage(){
         steps.openPage(BASE_URL)
@@ -32,6 +35,9 @@ public class MainPageTests extends TestBase {
     @Test
     @Feature("Главная страница")
     @Tags({@Tag("regress"), @Tag("web")})
+    @AutoMember("Izibekova")
+    @ManualMember("Izibekova")
+    @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка отображения разделов меню")
     public void checkItemsIsDisplayed(){
         steps.openPage(BASE_URL)
@@ -41,6 +47,9 @@ public class MainPageTests extends TestBase {
     @Test
     @Feature("Главная страница")
     @Tags({@Tag("regress"), @Tag("web")})
+    @AutoMember("Izibekova")
+    @ManualMember("Izibekova")
+    @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка отображаения разделов основного меню")
     public void checkItemsBaseMenuAreDisplayed(){
         steps.openPage(BASE_URL)

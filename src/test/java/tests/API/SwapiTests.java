@@ -1,8 +1,7 @@
 package tests.API;
 
 import Specs.Specs;
-import annotations.Layer;
-import annotations.Microservice;
+import annotations.*;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import models.PersonExtended;
@@ -24,6 +23,9 @@ public class SwapiTests {
     @Microservice("АПИ")
     @Feature("Получение информации о персонажах")
     @Tag("api")
+    @AutoMember("Izibekova")
+    @JiraIssues({@JiraIssue("QC5-9")})
+    @ManualMember("Izibekova")
     @DisplayName("Проверка получения информации о первом герое")
     public void successGetUsersList(){
         Specs.request
@@ -39,6 +41,9 @@ public class SwapiTests {
     @Microservice("АПИ")
     @Feature("Получение информации о персонажах")
     @Tag("api")
+    @AutoMember("Izibekova")
+    @ManualMember("Izibekova")
+    @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка получения информации о росте героя")
     public void successGetListUserCheckName(){
         PersonExtended data = Specs.request
@@ -55,6 +60,9 @@ public class SwapiTests {
     @Microservice("АПИ")
     @Feature("Получение информации о персонажах")
     @Tag("api")
+    @AutoMember("Izibekova")
+    @ManualMember("Izibekova")
+    @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка получения информации об общем кол-ве персонажей на сервисе")
     public void successGetListUserCheckCount(){
         PersonExtended data = Specs.request
@@ -70,6 +78,9 @@ public class SwapiTests {
     @Microservice("АПИ")
     @Feature("Получение информации о персонажах")
     @Tag("api")
+    @AutoMember("Izibekova")
+    @ManualMember("Izibekova")
+    @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка корректной ссылки")
     public void successGetListUserCheckURL(){
         PersonExtended data = Specs.request
@@ -86,6 +97,9 @@ public class SwapiTests {
     @Microservice("АПИ")
     @Feature("Получение информации о персонажах")
     @Tag("api")
+    @AutoMember("Izibekova")
+    @ManualMember("Izibekova")
+    @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Проверка получения информации массе героя")
     public void successGetListUserMass(){
         PersonExtended data = Specs.request

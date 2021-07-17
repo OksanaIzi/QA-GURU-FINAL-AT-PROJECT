@@ -1,6 +1,6 @@
 package tests.UI;
 
-import annotations.Layer;
+import annotations.*;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -22,6 +22,9 @@ public class AthorizationTests extends TestBase {
 
     @Test
     @Disabled
+    @AutoMember("Izibekova")
+    @ManualMember("Izibekova")
+    @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Авторизация с валидными данными")
     public void athorizationWithValidCredentials(){
         step("Открывам главную страницу", () -> {
@@ -52,6 +55,9 @@ public class AthorizationTests extends TestBase {
 
     @Test
     @Disabled
+    @AutoMember("Izibekova")
+    @ManualMember("Izibekova")
+    @JiraIssues({@JiraIssue("QC5-9")})
     @DisplayName("Авторизация с невалидными данными")
     public void athorizationWithInvalidCredentials(){
         step("Открывам главную страницу", () -> {
